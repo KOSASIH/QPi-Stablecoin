@@ -1,2 +1,46 @@
-# Google App Engine generated folder
-appengine-generated/
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+artifacts/
+
+# Environment variables
+.env
+.env.example
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Hardhat artifacts
+hardhat_cache/
+hardhat_local/
+
+# Generated files
+*.pem
+*.p12
+
+# Miscellaneous
+*.tgz
+*.zip
