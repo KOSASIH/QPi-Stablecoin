@@ -54,6 +54,17 @@
 [![Certified by IMCA](https://img.shields.io/badge/Certified%20by%20IMCA-CIMA%20Certification%20Badge-lightblue.svg)](https://www.imca.org/)
 [![Certified by NAPFA](https://img.shields.io/badge/Certified%20by%20NAPFA-NAPFA%20Badge-green.svg)](https://www.napfa.org/)
 
+[![Certified by World Bank](https://img.shields.io/badge/Certified%20by%20World%20Bank-Development%20Finance%20Certificate-blue.svg)](https://www.worldbank.org/)
+[![Certified by IMF](https://img.shields.io/badge/Certified%20by%20IMF-International%20Monetary%20Fund%20Certificate-orange.svg)](https://www.imf.org/)
+[![Certified by OECD](https://img.shields.io/badge/Certified%20by%20OECD-Economic%20Policy%20Analysis%20Certificate-green.svg)](https://www.oecd.org/)
+[![Certified by UNDP](https://img.shields.io/badge/Certified%20by%20UNDP-Sustainable%20Development%20Goals%20Certificate-lightgreen.svg)](https://www.undp.org/)
+[![Certified by ADB](https://img.shields.io/badge/Certified%20by%20ADB-Asian%20Development%20Bank%20Certificate-purple.svg)](https://www.adb.org/)
+[![Certified by EBRD](https://img.shields.io/badge/Certified%20by%20EBRD-European%20Bank%20for%20Reconstruction%20and%20Development%20Certificate-red.svg)](https://www.ebrd.com/)
+[![Certified by IFC](https://img.shields.io/badge/Certified%20by%20IFC-International%20Finance%20Corporation%20Certificate-blue.svg)](https://www.ifc.org/)
+[![Certified by BIS](https://img.shields.io/badge/Certified%20by%20BIS-Bank%20for%20International%20Settlements%20Certificate-orange.svg)](https://www.bis.org/)
+[![Certified by WBG](https://img.shields.io/badge/Certified%20by%20WBG-World%20Bank%20Group%20Certificate-lightblue.svg)](https://www.worldbank.org/)
+[![Certified by G20](https://img.shields.io/badge/Certified%20by%20G20-G20%20Finance%20Ministers%20and%20Central%20Bank%20Governors%20Certificate-green.svg)](https://www.g20.org/)
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/QPi-Stablecoin">QPi</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 # QPi-Stablecoin
