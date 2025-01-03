@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "compiler-version": ["error", ">=0.8.0"],
+        "func-name-mixedcase": "off",
+        "no-empty-blocks": "warn",
+        "no-unused-vars": "warn",
+        "reason-string": "warn",
+        "avoid-sha3": "warn",
+        "not-rely-on-time": "warn"
+    }
+}
