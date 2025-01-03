@@ -1,0 +1,6 @@
+# tools/analysis/slither-config.yaml
+
+# Slither configuration file
+exclude:
+  - tests
+  - migrations
