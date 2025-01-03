@@ -1,2 +1,2 @@
 # QPi-Stablecoin
-QPi-Stablecoin is the official repository for the QPi project, which aims to transform Pi Coin into a quantum-secure stablecoin pegged to the value of $314.159.
+QPi-Stablecoin is the official repository for the QPi project, which aims to transform Pi Coin into a quantum-secure stablecoin pegged to the value of $314.159. This repository contains the core codebase, smart contracts, and documentation for implementing the stable value mechanism, quantum-resistant security protocols, and cross-chain interoperability features. Join us in revolutionizing the blockchain landscape with QPi!
