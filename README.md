@@ -64,6 +64,16 @@
 [![Certified by BIS](https://img.shields.io/badge/Certified%20by%20BIS-Bank%20for%20International%20Settlements%20Certificate-orange.svg)](https://www.bis.org/)
 [![Certified by WBG](https://img.shields.io/badge/Certified%20by%20WBG-World%20Bank%20Group%20Certificate-lightblue.svg)](https://www.worldbank.org/)
 [![Certified by G20](https://img.shields.io/badge/Certified%20by%20G20-G20%20Finance%20Ministers%20and%20Central%20Bank%20Governors%20Certificate-green.svg)](https://www.g20.org/)
+[![Certified by World Bank Group](https://img.shields.io/badge/Certified%20by%20World%20Bank%20Group-Global%20Development%20Certificate-blue.svg)](https://www.worldbank.org/)
+[![Certified by International Monetary Fund](https://img.shields.io/badge/Certified%20by%20IMF-IMF%20Economic%20Policy%20Certificate-orange.svg)](https://www.imf.org/)
+[![Certified by Asian Development Bank](https://img.shields.io/badge/Certified%20by%20ADB-ADB%20Project%20Management%20Certificate-green.svg)](https://www.adb.org/)
+[![Certified by African Development Bank](https://img.shields.io/badge/Certified%20by%20AfDB-AfDB%20Investment%20Certificate-lightgreen.svg)](https://www.afdb.org/)
+[![Certified by European Investment Bank](https://img.shields.io/badge/Certified%20by%20EIB-EIB%20Project%20Finance%20Certificate-purple.svg)](https://www.eib.org/)
+[![Certified by Inter-American Development Bank](https://img.shields.io/badge/Certified%20by%20IDB-IDB%20Development%20Finance%20Certificate-red.svg)](https://www.iadb.org/)
+[![Certified by World Trade Organization](https://img.shields.io/badge/Certified%20by%20WTO-WTO%20Trade%20Policy%20Certificate-blue.svg)](https://www.wto.org/)
+[![Certified by Organisation for Economic Co-operation and Development](https://img.shields.io/badge/Certified%20by%20OECD-OECD%20Economic%20Analysis%20Certificate-orange.svg)](https://www.oecd.org/)
+[![Certified by United Nations](https://img.shields.io/badge/Certified%20by%20UN-UN%20Sustainable%20Development%20Goals%20Certificate-lightblue.svg)](https://www.un.org/sustainabledevelopment/)
+[![Certified by Financial Stability Board](https://img.shields.io/badge/Certified%20by%20FSB-FSB%20Financial%20Stability%20Certificate-green.svg)](https://www.fsb.org/)
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/QPi-Stablecoin">QPi</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
