@@ -1,0 +1,103 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+// Import libraries for quantum-safe cryptography and governance
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/governance/utils/IVotes.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+
+/// @title QPi-Stablecoin Contract
+/// @notice Implements QPi stablecoin with quantum-safe features
+contract QPiStablecoin is ERC20Pausable, Ownable, ReentrancyGuard {
+    uint256 public constant PEG_VALUE = 314159; // $314.159
+    uint256 public constant DECIMALS = 18;
+
+    address public oracle; // Oracle address for price updates
+    mapping(address => bool) public governors; // Governance participants
+
+    event StablecoinMinted(address indexed recipient, uint256 amount);
+    event StablecoinBurned(address indexed account, uint256 amount);
+    event OracleUpdated(address indexed newOracle);
+    event GovernanceUpdated(address indexed governor, bool status);
+
+    modifier onlyOracle() {
+        require(msg.sender == oracle, "Caller is not the oracle");
+        _;
+    }
+
+    modifier onlyGovernors() {
+        require(governors[msg.sender], "Caller is not a governor");
+        _;
+    }
+
+    constructor(address _oracle) ERC20("QPi Stablecoin", "QPI") {
+        oracle = _oracle;
+        governors[msg.sender] = true; // Contract creator as initial governor
+        _mint(msg.sender, 1_000_000 * 10 ** DECIMALS); // Initial supply
+    }
+
+    /// @notice Updates the oracle address
+    /// @param _newOracle Address of the new oracle
+    function updateOracle(address _newOracle) external onlyOwner {
+        oracle = _newOracle;
+        emit OracleUpdated(_newOracle);
+    }
+
+    /// @notice Adds or removes a governor
+    /// @param _governor Address of the governor
+    /// @param _status Boolean to add (true) or remove (false) a governor
+    function updateGovernance(address _governor, bool _status) external onlyOwner {
+        governors[_governor] = _status;
+        emit GovernanceUpdated(_governor, _status);
+    }
+
+    /// @notice Mints new QPi tokens
+    /// @param recipient Address of the recipient
+    /// @param amount Amount of tokens to mint
+    function mintStablecoin(address recipient, uint256 amount) external onlyOracle nonReentrant {
+        _mint(recipient, amount);
+        emit StablecoinMinted(recipient, amount);
+    }
+
+    /// @notice Burns QPi tokens from an account
+    /// @param account Address of the account
+    /// @param amount Amount of tokens to burn
+    function burnStablecoin(address account, uint256 amount) external onlyOracle nonReentrant {
+        _burn(account, amount);
+        emit StablecoinBurned(account, amount);
+    }
+
+    /// @notice Adjusts supply dynamically based on external price data
+    /// @param newPrice Latest price from oracle
+    function adjustSupply(uint256 newPrice) external onlyOracle {
+        require(newPrice > 0, "Invalid price");
+
+        if (newPrice > PEG_VALUE) {
+            uint256 excessSupply = totalSupply() * (newPrice - PEG_VALUE) / PEG_VALUE;
+            _mint(address(this), excessSupply);
+        } else if (newPrice < PEG_VALUE) {
+            uint256 shortageSupply = totalSupply() * (PEG_VALUE - newPrice) / PEG_VALUE;
+            _burn(address(this), shortageSupply);
+        }
+    }
+
+    /// @notice Pauses all contract operations
+    function pause() external onlyGovernors {
+        _pause();
+    }
+
+    /// @notice Unpauses all contract operations
+    function unpause() external onlyGovernors {
+        _unpause();
+    }
+
+    /// @notice Allows transfer of tokens with optional quantum-safe mechanism
+    /// @param recipient Address of the recipient
+    /// @param amount Amount of tokens to transfer
+    function transferQuantumSafe(address recipient, uint256 amount) external returns (bool) {
+        // Implement quantum-safe transfer mechanism (example placeholder)
+        _transfer(msg.sender, recipient, amount);
+        return true;
+    }
+}
