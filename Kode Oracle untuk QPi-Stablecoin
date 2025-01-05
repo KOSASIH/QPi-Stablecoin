@@ -1,0 +1,72 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+
+/// @title Quantum Oracle for QPi-Stablecoin
+/// @notice Provides secure and reliable price feeds for QPi Stablecoin
+contract QPiOracle is Ownable, ReentrancyGuard {
+    uint256 public lastUpdated; // Timestamp of the last update
+    uint256 public currentPrice; // Current price in USD (with 6 decimals precision)
+    uint256 public priceUpdateInterval; // Minimum interval between updates
+
+    mapping(address => bool) public authorizedUpdaters; // Addresses allowed to update the price
+
+    event PriceUpdated(uint256 newPrice, uint256 timestamp);
+    event UpdaterAuthorized(address indexed updater, bool status);
+    event UpdateIntervalChanged(uint256 newInterval);
+
+    constructor(uint256 _initialPrice, uint256 _priceUpdateInterval) {
+        require(_initialPrice > 0, "Initial price must be greater than zero");
+        require(_priceUpdateInterval > 0, "Update interval must be greater than zero");
+
+        currentPrice = _initialPrice;
+        priceUpdateInterval = _priceUpdateInterval;
+        lastUpdated = block.timestamp;
+
+        authorizedUpdaters[msg.sender] = true; // Contract owner as default updater
+    }
+
+    /// @notice Updates the price feed
+    /// @param _newPrice The new price to be set (in USD with 6 decimals precision)
+    function updatePrice(uint256 _newPrice) external nonReentrant {
+        require(authorizedUpdaters[msg.sender], "Caller is not an authorized updater");
+        require(_newPrice > 0, "Price must be greater than zero");
+        require(block.timestamp >= lastUpdated + priceUpdateInterval, "Update interval not reached");
+
+        currentPrice = _newPrice;
+        lastUpdated = block.timestamp;
+
+        emit PriceUpdated(_newPrice, block.timestamp);
+    }
+
+    /// @notice Authorizes or revokes authorization for an updater
+    /// @param _updater Address of the updater
+    /// @param _status True to authorize, false to revoke
+    function setAuthorizedUpdater(address _updater, bool _status) external onlyOwner {
+        authorizedUpdaters[_updater] = _status;
+        emit UpdaterAuthorized(_updater, _status);
+    }
+
+    /// @notice Changes the price update interval
+    /// @param _newInterval The new interval in seconds
+    function setUpdateInterval(uint256 _newInterval) external onlyOwner {
+        require(_newInterval > 0, "Update interval must be greater than zero");
+        priceUpdateInterval = _newInterval;
+        emit UpdateIntervalChanged(_newInterval);
+    }
+
+    /// @notice Fetches the current price and last updated timestamp
+    /// @return price The current price in USD with 6 decimals precision
+    /// @return timestamp The timestamp of the last update
+    function getPrice() external view returns (uint256 price, uint256 timestamp) {
+        return (currentPrice, lastUpdated);
+    }
+
+    /// @notice Fetches the current price for use in external smart contracts
+    /// @return The current price in USD with 6 decimals precision
+    function fetchCurrentPrice() external view returns (uint256) {
+        return currentPrice;
+    }
+}
