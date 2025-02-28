@@ -1,7 +1,7 @@
 # Quantum AI Integration
 
 ## Overview
-The Quantum AI Engine is a cutting-edge component of the QPi-Stablecoin project that leverages advanced quantum technology and artificial intelligence to analyze market conditions and dynamically adjust the supply of Pi Coin to maintain its target value of $314.159. This document provides an overview of the integration, architecture, and usage of the Quantum AI Engine.
+The Quantum AI Engine is a cutting-edge component of the QPi-Stablecoin project that leverages advanced quantum technology and artificial intelligence to analyze market conditions and dynamically adjust the supply of Pi Coin to maintain its target value of **$314,159.00** (Three hundred fourteen thousand one hundred fifty-nine dollars and zero cents). This document provides an overview of the integration, architecture, and usage of the Quantum AI Engine.
 
 ## Architecture
 The Quantum AI Engine consists of several key components that work together to achieve its functionality:
