@@ -10,7 +10,8 @@ QPi-Stablecoin/
 │   ├── API.md                    # API documentation
 │   ├── user_guide.md             # User guide for QPi
 │   ├── developer_guide.md        # Developer guide for contributing and building
-│   └── security_audit.md         # Security audit report and findings
+│   ├── security_audit.md         # Security audit report and findings
+│   └── quantumAI_integration.md   # Documentation for Quantum AI integration
 │
 ├── contracts/                    # Smart contracts directory
 │   ├── QPiToken.sol              # ERC20 token contract for QPi with minting and burning features
@@ -36,18 +37,22 @@ QPi-Stablecoin/
 │   │       ├── transactionModel.js # Transaction data model with history tracking
 │   │       └── governanceModel.js  # Governance data model for proposals and votes
 │   │
-│   ├── quantum/                  # Quantum computing related code
-│   │   ├── quantumSecurity.js     # Quantum-resistant security implementation using lattice-based cryptography
-│   │   ├── quantumAlgorithms.js    # Algorithms for quantum computing (e.g., Shor's algorithm for factoring)
-│   │   ├── quantumKeyDistribution.js # Quantum key distribution for secure communication
-│   │   └── quantumRandomness.js    # Quantum random number generation for enhanced security
+│   ├── quantumAI/                # Quantum AI Engine directory
+│   │   ├── index.js              # Entry point for the Quantum AI Engine
+│   │   ├── marketAnalysis.js      # Market analysis module
+│   │   ├── dynamicPricing.js      # Dynamic pricing module
+│   │   ├── utils.js              # Utility functions for Quantum AI
+│   │   └── config.js             # Configuration settings for Quantum AI (e.g., target price)
 │   │
 │   └── tests/                    # Test files
 │       ├── unit/                 # Unit tests
 │       │   ├── QPiToken.test.js   # Tests for QPi token contract with edge cases
 │       │   ├── StableValueMechanism.test.js # Tests for stable value mechanism with various scenarios
 │       │   ├── governance.test.js  # Tests for governance contract with proposal and voting scenarios
-│       │   └── multiSigWallet.test.js # Tests for multi-signature wallet functionality
+│       │   ├── multiSigWallet.test.js # Tests for multi-signature wallet functionality
+│       │   ├── marketAnalysis.test.js # Tests for market analysis module
+│       │   ├── dynamicPricing.test.js # Tests for dynamic pricing module
+│       │   └── utils.test.js      # Tests for utility functions
 │       └── integration/          # Integration tests
 │           ├── api.test.js       # Tests for API endpoints with various request scenarios
 │           └── endToEnd.test.js   # End-to-end tests for the entire application flow
@@ -55,12 +60,12 @@ QPi-Stablecoin/
 ├── scripts/                      # Deployment and utility scripts
 │   ├── deploy.js                 # Script for deploying smart contracts with migration support
 │   ├── setup.js                  # Initial setup script for the environment with configuration
-│   ├── generateKeys.js           # Script for generating cryptographic keys with secure storage
+│   ├── generateKeys.js # Script for generating cryptographic keys with secure storage
 │   ├── audit.js                  # Script for running security audits on contracts
 │   └── monitor.js                # Script for monitoring contract events and transactions
 │
 ├── examples/                     # Example applications and use cases
-│   ├── wallet Example/            # Example wallet implementation with advanced features
+│   ├── walletExample/            # Example wallet implementation with advanced features
 │   │   ├── multiSigWalletExample.js # Example of using the multi-signature wallet
 │   │   └── walletConnectExample.js   # Example of connecting to wallets using WalletConnect
 │   └── dAppExample/              # Example decentralized application
@@ -73,4 +78,4 @@ QPi-Stablecoin/
 │   ├── build/                    # Build scripts and configurations
 │   └── analysis/                 # Static analysis tools for smart contracts
 │
-└── .gitignore                    # Git ignore file
+└── .gitignore                    # Git ignore file 
